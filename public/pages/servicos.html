@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Serviços - Éris Consultoria Estratégica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#2a3643",
+                        "secondary-container": "#b39301",
+                        "surface-container": "#15202d",
+                        "primary": "#f0c131",
+                        "on-tertiary-fixed": "#001c3b",
+                        "on-tertiary": "#183152",
+                        "outline": "#9a907a",
+                        "surface-variant": "#2a3643",
+                        "on-primary-fixed": "#241a00",
+                        "tertiary-fixed": "#d5e3ff",
+                        "secondary-fixed": "#ffe07e",
+                        "on-tertiary-fixed-variant": "#30486a",
+                        "on-tertiary-container": "#243c5d",
+                        "surface": "#081421",
+                        "surface-bright": "#2e3a48",
+                        "surface-container-lowest": "#040f1b",
+                        "background": "#081421",
+                        "inverse-on-surface": "#26313f",
+                        "primary-fixed-dim": "#f0c131",
+                        "inverse-surface": "#d7e3f5",
+                        "on-error": "#690005",
+                        "surface-dim": "#081421",
+                        "inverse-primary": "#755b00",
+                        "outline-variant": "#4e4634",
+                        "on-background": "#d7e3f5",
+                        "surface-container-high": "#1f2b38",
+                        "on-primary": "#3e2e00",
+                        "tertiary-container": "#8fa7ce",
+                        "surface-tint": "#f0c131",
+                        "on-primary-fixed-variant": "#594400",
+                        "on-primary-container": "#4b3900",
+                        "on-secondary-fixed": "#231b00",
+                        "on-secondary-container": "#392d00",
+                        "on-secondary": "#3b2f00",
+                        "on-surface": "#d7e3f5",
+                        "tertiary-fixed-dim": "#b0c8f0",
+                        "primary-fixed": "#ffdf91",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#564500",
+                        "secondary": "#e8c33f",
+                        "on-surface-variant": "#d1c5ad",
+                        "tertiary": "#b0c8f0",
+                        "surface-container-low": "#101c29",
+                        "primary-container": "#cca000",
+                        "secondary-fixed-dim": "#e8c33f",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(42, 54, 67, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 0.5px solid rgba(240, 193, 49, 0.2);
+        }
+        .gilded-pill {
+            background: linear-gradient(135deg, #f0c131 0%, #cca000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .gilded-pill::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(45deg) translateY(-100%);
+            transition: transform 0.6s ease;
+        }
+        .gilded-pill:hover::after {
+            transform: rotate(45deg) translateY(100%);
+        }
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #f0c131 0%, #cca000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .sovereign-container {
+            position: relative;
+        }
+        .status-light {
+            width: 8px;
+            height: 8px;
+            background-color: #f0c131;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(240, 193, 49, 0.6);
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased selection:bg-primary/30 selection:text-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#081421]/60 backdrop-blur-xl border-b border-[#f0c131]/20 shadow-2xl shadow-[#000814]/40 font-['Plus_Jakarta_Sans'] tracking-tight">
+<div class="flex justify-between items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-4">
+<span class="text-2xl font-bold tracking-tighter text-[#f0c131]">Consultoria Éris</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#f0c131] border-b-2 border-[#f0c131] pb-1 hover:text-[#f0c131] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Solutions</a>
+<a class="text-slate-400 font-medium hover:text-[#f0c131] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Ecosystem</a>
+<a class="text-slate-400 font-medium hover:text-[#f0c131] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Methodology</a>
+<a class="text-slate-400 font-medium hover:text-[#f0c131] transition-colors duration-300 scale-95 active:scale-90 transition-transform" href="#">Insights</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden md:block text-slate-400 hover:text-[#f0c131] transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
+</button>
+<button class="gilded-pill text-on-primary px-6 py-2 rounded-full font-bold text-sm tracking-wide transition-transform hover:scale-105 active:scale-95">Contact</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center justify-center overflow-hidden border-b border-outline-variant/30">
+<!-- Subtle Gold Apple Motif Background -->
+<div class="absolute inset-0 z-0 opacity-5 pointer-events-none flex items-center justify-center">
+<img alt="Consultoria Éris Logo" class="w-[800px] h-[800px] object-contain blur-sm" data-alt="Abstract geometric gold apple shape glowing faintly against deep space dark background, high-end 3D minimalist render, cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHkAmDZfDEbOJHw-2X_TRxQFK3mOmkFTFgG4qkAf-lIw0DBIkh3mnFlwnBZGlHScvg_qkgCAFPL5ALLNqj9f0vAtXL8qxeYfJvKbNjkxJqwv7Ke7OK7Xrknaq1D1rLs0ZqyEMN-f6fe1r36o-DGWOzSx415VsB9_9xh5eTZn6ImTCDEP8D-Q6hdwfR988LFn4dGkU4bibwfUmnEJPN6vlAqWHqr0IKbweDbyt_46H6I4T43uH_bCjwD4jphzgtpngREx5Qox-iqh0A"/>
+</div>
+<div class="relative z-10 max-w-5xl mx-auto px-8 text-center pt-16">
+<h1 class="font-display text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+<span class="text-gradient-gold block">Nossas Soluções</span>
+</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-3xl mx-auto leading-relaxed mb-12">
+                    Scaling operations with precision. High-end strategic interventions designed for sovereign control and algorithmic efficiency.
+                </p>
+</div>
+<!-- Ambient Gradient at bottom -->
+<div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-surface-container-low to-transparent z-0"></div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-32 bg-surface-container-low px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[400px]">
+<!-- Card 1 -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors duration-500 sovereign-container relative overflow-hidden">
+<div class="status-light"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative z-10">
+<span class="font-label text-xs tracking-widest text-primary uppercase mb-6 block">01 / Automacao</span>
+<span class="material-symbols-outlined text-4xl text-primary mb-6 block" style="font-variation-settings: 'wght' 200;">precision_manufacturing</span>
+<h3 class="font-display text-2xl font-bold mb-4">Blueprints de Automacao</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Custom workflows utilizing n8n and Python scripts to eliminate operational friction and enforce precise execution.</p>
+</div>
+<div class="relative z-10 flex justify-between items-end border-t border-outline-variant/30 pt-4 mt-auto">
+<span class="font-label text-xs text-on-surface-variant">A partir de R$ 5k</span>
+<button class="text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors duration-500 sovereign-container relative overflow-hidden lg:col-span-2">
+<div class="status-light"></div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative z-10 lg:flex lg:gap-12 lg:h-full">
+<div class="lg:w-1/2">
+<span class="font-label text-xs tracking-widest text-primary uppercase mb-6 block">02 / Legal Tech</span>
+<span class="material-symbols-outlined text-4xl text-primary mb-6 block" style="font-variation-settings: 'wght' 200;">gavel</span>
+<h3 class="font-display text-3xl font-bold mb-4">Ecossistema OAB</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Algorithmic metrics and systemic intelligence tailored for high-tier law firms. Transforming legal operations into predictive machines.</p>
+</div>
+<div class="hidden lg:flex lg:w-1/2 flex-col justify-end border-l border-outline-variant/30 pl-8 pb-4">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="font-label text-xs text-on-surface">Predictive Analysis</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-sm">check</span>
+<span class="font-label text-xs text-on-surface">Automated Filing</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative z-10 flex justify-between items-end border-t border-outline-variant/30 pt-4 mt-4 lg:mt-0">
+<span class="font-label text-xs text-on-surface-variant">Sob Consulta</span>
+<button class="text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors duration-500 sovereign-container relative overflow-hidden">
+<div class="status-light" style="background-color: #9a907a; box-shadow: none;"></div>
+<div class="relative z-10">
+<span class="font-label text-xs tracking-widest text-primary uppercase mb-6 block">03 / Operations</span>
+<span class="material-symbols-outlined text-4xl text-primary mb-6 block" style="font-variation-settings: 'wght' 200;">menu_book</span>
+<h3 class="font-display text-2xl font-bold mb-4">Playbooks Lean</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Operational SOPs engineered for unquestionable quality and lean execution across your entire workforce.</p>
+</div>
+<div class="relative z-10 flex justify-between items-end border-t border-outline-variant/30 pt-4 mt-auto">
+<span class="font-label text-xs text-on-surface-variant">A partir de R$ 8k</span>
+<button class="text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors duration-500 sovereign-container relative overflow-hidden">
+<div class="status-light"></div>
+<div class="relative z-10">
+<span class="font-label text-xs tracking-widest text-primary uppercase mb-6 block">04 / Security</span>
+<span class="material-symbols-outlined text-4xl text-primary mb-6 block" style="font-variation-settings: 'wght' 200;">shield_locked</span>
+<h3 class="font-display text-2xl font-bold mb-4">Compliance LGPD</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Strategic data privacy architecture. Not just legal compliance, but establishing data sovereignty as a competitive asset.</p>
+</div>
+<div class="relative z-10 flex justify-between items-end border-t border-outline-variant/30 pt-4 mt-auto">
+<span class="font-label text-xs text-on-surface-variant">A partir de R$ 12k</span>
+<button class="text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="glass-panel rounded-2xl p-8 flex flex-col justify-between group hover:border-primary/50 transition-colors duration-500 sovereign-container relative overflow-hidden">
+<div class="status-light"></div>
+<div class="relative z-10">
+<span class="font-label text-xs tracking-widest text-primary uppercase mb-6 block">05 / Intelligence</span>
+<span class="material-symbols-outlined text-4xl text-primary mb-6 block" style="font-variation-settings: 'wght' 200;">groups</span>
+<h3 class="font-display text-2xl font-bold mb-4">Workforce Analytics</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">HR data intelligence translating human capital performance into hard metric dashboards for executive oversight.</p>
+</div>
+<div class="relative z-10 flex justify-between items-end border-t border-outline-variant/30 pt-4 mt-auto">
+<span class="font-label text-xs text-on-surface-variant">A partir de R$ 15k</span>
+<button class="text-primary hover:text-primary-fixed transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#081421] border-t border-[#f0c131]/10 flex flex-col md:flex-row justify-between items-center gap-8 font-mono text-[10px] uppercase tracking-widest relative">
+<div class="absolute top-0 left-0 w-full bg-gradient-to-r from-transparent via-[#f0c131]/30 to-transparent h-[0.5px]"></div>
+<div class="text-lg font-black text-[#f0c131]">Consultoria Éris</div>
+<div class="text-slate-500">© 2024 Éris Consultoria Estratégica. The Sovereign Lens.</div>
+<div class="flex gap-6">
+<a class="text-slate-500 hover:text-[#f0c131] transition-all duration-500 opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#f0c131] transition-all duration-500 opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-[#f0c131] transition-all duration-500 opacity-80 hover:opacity-100" href="#">Legal Notice</a>
+<a class="text-slate-500 hover:text-[#f0c131] transition-all duration-500 opacity-80 hover:opacity-100" href="#">Sustainability</a>
+</div>
+</footer>
+</body></html>
