@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sobre Nós | ERIS Consultoria Estratégica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#392d00",
+                        "surface-dim": "#081421",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#2a3643",
+                        "inverse-primary": "#755b00",
+                        "on-tertiary-fixed-variant": "#30486a",
+                        "on-surface-variant": "#d1c5ad",
+                        "tertiary-fixed": "#d5e3ff",
+                        "on-primary-fixed": "#241a00",
+                        "primary-fixed-dim": "#f0c131",
+                        "background": "#081421",
+                        "primary-fixed": "#ffdf91",
+                        "tertiary-fixed-dim": "#b0c8f0",
+                        "on-secondary-fixed-variant": "#564500",
+                        "on-tertiary-container": "#243c5d",
+                        "on-error": "#690005",
+                        "primary-container": "#cca000",
+                        "secondary-container": "#b39301",
+                        "surface-container-highest": "#2a3643",
+                        "outline-variant": "#4e4634",
+                        "surface-container-lowest": "#040f1b",
+                        "primary": "#f0c131",
+                        "on-tertiary": "#183152",
+                        "on-primary": "#3e2e00",
+                        "inverse-on-surface": "#26313f",
+                        "surface-container-low": "#101c29",
+                        "on-tertiary-fixed": "#001c3b",
+                        "on-primary-container": "#4b3900",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#f0c131",
+                        "secondary-fixed-dim": "#e8c33f",
+                        "secondary-fixed": "#ffe07e",
+                        "on-primary-fixed-variant": "#594400",
+                        "on-surface": "#d7e3f5",
+                        "error-container": "#93000a",
+                        "tertiary": "#b0c8f0",
+                        "on-secondary": "#3b2f00",
+                        "secondary": "#e8c33f",
+                        "tertiary-container": "#8fa7ce",
+                        "on-secondary-fixed": "#231b00",
+                        "on-background": "#d7e3f5",
+                        "surface-container-high": "#1f2b38",
+                        "outline": "#9a907a",
+                        "inverse-surface": "#d7e3f5",
+                        "surface-bright": "#2e3a48",
+                        "surface": "#081421",
+                        "surface-container": "#15202d"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Custom shimmer gradient for primary buttons */
+        .btn-primary-shimmer {
+            background: linear-gradient(135deg, #f0c131 0%, #cca000 100%);
+            background-size: 200% 200%;
+            transition: background-position 0.5s ease;
+        }
+        .btn-primary-shimmer:hover {
+            background-position: 100% 100%;
+            box-shadow: 0 0 20px rgba(240, 193, 49, 0.4);
+        }
+        
+        /* Organic Blob Mask */
+        .blob-mask {
+            mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="%23FF0066" d="M42.7,-73.4C55.9,-67.8,67.6,-58,76.5,-45.5C85.4,-33.1,91.6,-18,92.5,-2.5C93.4,13.1,89.1,29,80.1,42.4C71.2,55.8,57.7,66.8,42.5,73.1C27.2,79.4,10.2,81,-6.6,80C-23.4,79,-39.8,75.4,-52.3,66.5C-64.8,57.5,-73.4,43.2,-79.3,28C-85.3,12.7,-88.6,-3.6,-84.8,-18.2C-81.1,-32.8,-70.2,-45.8,-57.4,-51.9C-44.5,-58.1,-29.7,-57.5,-15.8,-60.8C-1.8,-64.1,11.3,-71.4,26.1,-74.6C40.9,-77.8,57.3,-76.9,42.7,-73.4Z" transform="translate(100 100)"/></svg>');
+            mask-size: cover;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+
+        /* Glass Card Base */
+        .glass-card {
+            background: rgba(42, 54, 67, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(204, 160, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(46, 58, 72, 0.7);
+            border-color: rgba(204, 160, 0, 0.6);
+            box-shadow: 0 10px 40px rgba(215, 227, 245, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#081421]/80 backdrop-blur-[20px] border-b border-[#CCA000]/15 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-center px-12 py-5 w-full max-w-full">
+<a class="text-2xl font-extrabold tracking-tighter text-[#f0c131] font-headline" href="#">ERIS</a>
+<div class="hidden md:flex gap-8 items-center font-headline tracking-wide text-sm font-bold">
+<a class="text-slate-400 hover:text-[#f0c131] transition-colors" href="#">Solutions</a>
+<a class="text-[#f0c131] border-b-2 border-[#f0c131] pb-1" href="#">Ecosystem</a>
+<a class="text-slate-400 hover:text-[#f0c131] transition-colors" href="#">Methodology</a>
+<a class="text-slate-400 hover:text-[#f0c131] transition-colors" href="#">Insights</a>
+</div>
+<button class="hidden md:flex bg-primary-container/20 text-[#f0c131] border border-[#CCA000]/40 px-6 py-2.5 rounded-full hover:bg-[#f0c131]/10 transition-all duration-300 scale-95 active:scale-90 font-label font-medium text-sm">
+                Get Started
+            </button>
+<button class="md:hidden text-[#f0c131]">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 pb-20 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center px-8 md:px-24">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center z-10 relative">
+<div class="space-y-8 lg:pr-12">
+<h1 class="font-display text-5xl md:text-7xl font-extrabold text-on-surface leading-tight tracking-tight">
+                        Nossa <span class="text-primary block mt-2">História</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl font-light">
+                        A ERIS Consultoria Estratégica nasceu da convicção de que o verdadeiro poder reside no silêncio estratégico. Nós arquitetamos o futuro das corporações soberanas com precisão implacável e visão profunda.
+                    </p>
+<div class="pt-4 flex gap-4 items-center">
+<span class="w-12 h-[1px] bg-primary/50 block"></span>
+<span class="font-headline text-sm text-primary tracking-widest uppercase">The Sovereign Architect</span>
+</div>
+</div>
+<div class="relative w-full h-[500px] flex justify-end items-center">
+<!-- Glass backing behind image -->
+<div class="absolute w-[90%] h-[90%] glass-card rounded-3xl right-0 -bottom-8 -z-10"></div>
+<!-- Organic Blob Image -->
+<img alt="ERIS Architecture" class="w-full h-full object-cover blob-mask opacity-90 shadow-2xl" data-alt="abstract architectural glass structure with warm golden hour sunlight reflecting off sharp angles against dark moody background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAATsYw2FWzlGoWvIuSGmAjY5ojMTZ8TvEByav5EdSIjx_3f9-SjBO3VDCAuqJBMdqO5HsGFkozeWc507NIGnnh1xf3WxIKteHE5MRzMyNiSKwLYP4BJEcFUKJRCjuX0tdzCPqEeiapaC5xACMQRVg89Mj5KE_5wxbD1nzqzwuI7w4YIMB7cErEPjpS81fpCNRe2k-P-Mp08dkSAkPJU9dV-dpuZ_g3xpfucagGJfWQV5VvLJA2ZqL1qkASyDOfuhyzZugH8Kuxxmag"/>
+<!-- Decorative Golden Element -->
+<div class="absolute -left-12 top-1/4 w-24 h-24 rounded-full bg-primary/10 blur-xl"></div>
+<div class="absolute right-12 -bottom-12 w-48 h-48 rounded-full bg-primary-container/20 blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- SVG Wave Divider -->
+<div class="w-full h-32 md:h-48 text-surface-container-low fill-current">
+<svg class="w-full h-full preserve-3d" viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,160L80,176C160,192,320,224,480,213.3C640,203,800,149,960,138.7C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+</div>
+<!-- Manifesto Quote Section -->
+<section class="bg-surface-container-low py-24 relative overflow-hidden">
+<!-- Ambient Glow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-8 text-center relative z-10">
+<span class="material-symbols-outlined text-primary text-6xl opacity-50 mb-8" data-icon="format_quote">format_quote</span>
+<h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-on-surface leading-tight tracking-tight mb-8">
+                    "A arquitetura do poder exige tanto <span class="text-primary italic font-serif">Excelência</span> quanto <span class="text-primary italic font-serif">Discrição</span>."
+                </h2>
+<p class="font-body text-on-surface-variant text-lg max-w-2xl mx-auto">
+                    Nosso compromisso não é apenas com o crescimento, mas com a sustentabilidade do domínio do mercado através de estratégias invisíveis porém absolutas.
+                </p>
+</div>
+</section>
+<!-- SVG Wave Divider -->
+<div class="w-full h-32 md:h-48 bg-surface-container-low text-surface fill-current rotate-180 transform">
+<svg class="w-full h-full preserve-3d" viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,160L80,176C160,192,320,224,480,213.3C640,203,800,149,960,138.7C1120,128,1280,160,1360,176L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+</svg>
+</div>
+<!-- Team Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto relative">
+<div class="mb-20 flex flex-col items-start max-w-2xl">
+<h3 class="font-headline text-primary text-sm font-bold tracking-widest uppercase mb-4">Liderança</h3>
+<h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface tracking-tight">
+                    A Mente Coletiva
+                </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Exec 1 -->
+<div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center group">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-primary/50 transition-colors duration-500 relative">
+<img alt="CEO" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="professional portrait of senior male executive in dark tailored suit against charcoal grey background with dramatic rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY9YeI_5Tph7rfxTC2bQKQFK94newj5h3z6nC0FtLu5jLe5jJLhzwi3YDEjnzo3YIbk77tJ0HNMzHVRqLiZlrvC2JlW2tDtYB0hqigP32m0PaGLN3IIhzXH8FxSv3mgK7tuu2FdaPvTcpCphUojZ0EqS4ZZrmJYnP4E5M4af3WFK_g8JI-q741nW7F16fyBO86qEbUqW9ysVLygLFScMd97QK_RjxPaOhG6e-iWLM0TZhWs_DPzrBrawDntlDiFzsgnrxOATPWkVxm"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-1">Alexandre Silva</h4>
+<p class="font-label text-sm text-primary mb-6">Sócio-Diretor, CEO</p>
+<a class="text-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant hover:border-primary/50" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="work">work</span>
+</a>
+</div>
+<!-- Exec 2 -->
+<div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center group mt-0 lg:mt-12">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-primary/50 transition-colors duration-500 relative">
+<img alt="CFO" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="professional portrait of sophisticated female executive in dark navy blazer against deep blue background with soft elegant lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8RUUx-V-Sycy3Oi3ehyEodqOJQWnxIZ48vRt6OEvGQYLfAj8k76n7vvqZ9aWVygSZ67Cn2J36MfOlAgIJ0IBIXWxpXIqp3HP6cyRu7L1fEq825g2PwCPbsQxFS1Y52620rPXWioKd2OLPLOpNNa3oUFn6htAQi4MNHJE9sC4eAWQpwkbQo-ORPc6ye88-jWY1LAuGfVABjQuyfRW9ny7JBT9H2PEp3OgNm90cMab8bIHEKAimNCmbtc3BO1Y9LiiY_CLsxxK_SPdj"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-1">Mariana Costa</h4>
+<p class="font-label text-sm text-primary mb-6">Diretora Financeira, CFO</p>
+<a class="text-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant hover:border-primary/50" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="work">work</span>
+</a>
+</div>
+<!-- Exec 3 -->
+<div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center group">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-primary/50 transition-colors duration-500 relative">
+<img alt="Diretor Jurídico" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="professional portrait of confident mature male executive in grey suit against dark studio background with strong directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtu-jdz-Y4i19SrqBl5fRgkUxkSwHAzZbU9q9NqlreYJowXqospL1UAAdqKuL4HBvz6aQJUQb760xZVFsI6RhTvSXlPxWUX8bj0HJndFXcnq7bFpyLmLtkU2yJf6spkuCemjlJOI01jnr8rj2T9DUKu1x46xB1a2RH4RqjKcw7gvfwqxPqNvoUPttfxircU3dcVAg1JupTtRoG8GhPkrYWVVkhFZ6D4WhgHdUOkqLhAMv5L_fT-VB-S7HcWGWXXvp6tUA-3MfH1Zlp"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-1">Roberto Mendes</h4>
+<p class="font-label text-sm text-primary mb-6">Diretor Jurídico</p>
+<a class="text-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant hover:border-primary/50" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="work">work</span>
+</a>
+</div>
+<!-- Exec 4 -->
+<div class="glass-card rounded-2xl p-8 flex flex-col items-center text-center group mt-0 lg:mt-12">
+<div class="w-32 h-32 rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-primary/50 transition-colors duration-500 relative">
+<img alt="Diretor de Tecnologia" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="professional portrait of modern female tech executive in minimalist dark top against subtle textured black wall with clean modern lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqd4j4ZzEvh71_c0kAEjpbBw_ghi7EpLc5nfKV6AWYg8yALKJO4aYjmIIeYgCALf0AhOdrWfnzTnOl1oTIaKZWisnZCXbx74Qhi92AOheQTrjJXXWpPaZH4inoua_QS5qNuY4f6_yA2DExdKf0fJ57WVqrOMIkxbNBEjN-qKe0UhgRIM8BVJXS4kEGKWdtObT5D_qpNsCft0HnVLM__p24qi66LB6JZ_VzoYmeD4wIJF4Gm5rxuBC5gw4v4Qf96vwoeEdXlQU-_K0P"/>
+</div>
+<h4 class="font-headline text-xl font-bold text-on-surface mb-1">Camila Rocha</h4>
+<p class="font-label text-sm text-primary mb-6">Diretora de Tecnologia</p>
+<a class="text-surface-variant hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full border border-surface-variant hover:border-primary/50" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="work">work</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-24 bg-surface-container-lowest relative">
+<div class="max-w-4xl mx-auto px-8">
+<div class="mb-20 text-center">
+<h2 class="font-display text-3xl md:text-4xl font-extrabold text-on-surface tracking-tight mb-4">
+                        Trajetória de Soberania
+                    </h2>
+<p class="font-body text-on-surface-variant">A evolução da nossa capacidade estratégica.</p>
+</div>
+<div class="relative border-l-2 border-surface-variant ml-4 md:ml-0 md:mx-auto md:w-1/2">
+<!-- Milestone 2018 -->
+<div class="mb-16 relative pl-12 md:-ml-8 group">
+<div class="absolute w-4 h-4 rounded-full bg-surface border-2 border-primary -left-[9px] top-2 group-hover:bg-primary transition-colors shadow-[0_0_10px_rgba(240,193,49,0.5)]"></div>
+<span class="font-headline text-primary font-bold text-lg mb-2 block">2018</span>
+<h4 class="font-headline text-xl text-on-surface font-semibold mb-2">Fundação</h4>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Estabelecimento das fundações em São Paulo, focando em reestruturação corporativa profunda para clientes selecionados.
+                        </p>
+</div>
+<!-- Milestone 2021 -->
+<div class="mb-16 relative pl-12 md:-ml-8 group">
+<div class="absolute w-4 h-4 rounded-full bg-surface border-2 border-primary -left-[9px] top-2 group-hover:bg-primary transition-colors shadow-[0_0_10px_rgba(240,193,49,0.5)]"></div>
+<span class="font-headline text-primary font-bold text-lg mb-2 block">2021</span>
+<h4 class="font-headline text-xl text-on-surface font-semibold mb-2">Expansão Metodológica</h4>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Implementação do framework de 'Arquitetura Soberana', integrando inteligência de dados com diplomacia corporativa.
+                        </p>
+</div>
+<!-- Milestone Present -->
+<div class="relative pl-12 md:-ml-8 group">
+<div class="absolute w-4 h-4 rounded-full bg-primary border-2 border-primary -left-[9px] top-2 shadow-[0_0_15px_rgba(240,193,49,0.8)]"></div>
+<span class="font-headline text-primary font-bold text-lg mb-2 block">Presente</span>
+<h4 class="font-headline text-xl text-on-surface font-semibold mb-2">Presença Global</h4>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                            Aconselhamento estratégico para líderes da Fortune 500, operando sob total confidencialidade através das Américas e Europa.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 max-w-5xl mx-auto text-center relative z-20">
+<div class="glass-card rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+<!-- Ambient Glow inside CTA -->
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px]"></div>
+<h2 class="font-display text-4xl md:text-5xl font-extrabold text-on-surface mb-6 relative z-10">
+                    Pronto para redefinir seu domínio?
+                </h2>
+<p class="font-body text-on-surface-variant text-lg mb-12 max-w-2xl mx-auto relative z-10">
+                    Conecte-se com nossos arquitetos seniores para uma avaliação inicial confidencial da sua estrutura estratégica.
+                </p>
+<button class="btn-primary-shimmer text-on-primary font-headline font-bold text-lg px-10 py-4 rounded-full inline-flex items-center gap-3 relative z-10 shadow-[0_4px_20px_rgba(240,193,49,0.2)]">
+                    Iniciar Diálogo
+                    <span class="material-symbols-outlined text-xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#081421] w-full py-20 relative overflow-hidden border-t border-surface-container-low">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="flex flex-col gap-6 max-w-sm">
+<a class="text-xl font-bold text-[#f0c131] tracking-tight font-headline" href="#">ERIS</a>
+<p class="font-body text-slate-500 text-sm leading-relaxed">
+                    © 2024 ERIS Consultoria Estratégica. The Sovereign Architect.
+                </p>
+</div>
+<div class="flex flex-col gap-4 font-body text-sm">
+<h5 class="font-headline text-on-surface font-semibold mb-2">Legal &amp; Ethics</h5>
+<a class="text-slate-500 hover:text-[#f0c131] hover:translate-x-1 transition-transform duration-300" href="#">Strategic Privacy</a>
+<a class="text-slate-500 hover:text-[#f0c131] hover:translate-x-1 transition-transform duration-300" href="#">Terms of Engagement</a>
+</div>
+<div class="flex flex-col gap-4 font-body text-sm">
+<h5 class="font-headline text-on-surface font-semibold mb-2">Ecosystem</h5>
+<a class="text-slate-500 hover:text-[#f0c131] hover:translate-x-1 transition-transform duration-300" href="#">Global Network</a>
+<a class="text-slate-500 hover:text-[#f0c131] hover:translate-x-1 transition-transform duration-300" href="#">Consultancy Insights</a>
+</div>
+</div>
+</footer>
+</body></html>
